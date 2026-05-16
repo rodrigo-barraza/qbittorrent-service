@@ -7,8 +7,6 @@ services:
       - "8080:8080"    # WebUI
       - "6881:6881"    # BitTorrent TCP
       - "6881:6881/udp" # BitTorrent UDP
-    env_file:
-      - .env
     environment:
       - PUID=1000
       - PGID=1000

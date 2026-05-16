@@ -86,7 +86,7 @@ fi
 
 # ── Create remote directory ──────────────────────────────────
 echo "   📁 Ensuring remote directory..."
-ssh "$SSH_HOST" "mkdir -p '${COMPOSE_DIR}' 2>/dev/null || sudo mkdir -p '${COMPOSE_DIR}'"
+ssh "$SSH_HOST" "mkdir -p '${COMPOSE_DIR}/config' 2>/dev/null || sudo mkdir -p '${COMPOSE_DIR}/config'"
 
 # ── Sync compose file ────────────────────────────────────────
 echo "   📦 Syncing docker-compose.yml..."
@@ -104,11 +104,8 @@ if [ -d "${SCRIPT_DIR}/custom-cont-init.d" ]; then
   done
 fi
 
-# ── Sync .env if exists ──────────────────────────────────────
-if [ -f "${SCRIPT_DIR}/.env" ]; then
-  echo "   🔐 Syncing .env..."
-  cat "${SCRIPT_DIR}/.env" | ssh "$SSH_HOST" "cat > '${COMPOSE_DIR}/.env'"
-fi
+
+
 
 # ── Create downloads directory ────────────────────────────────
 echo "   📁 Ensuring /volume1/downloads..."
