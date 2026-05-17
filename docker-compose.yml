@@ -8,8 +8,8 @@ services:
       - "6881:6881"    # BitTorrent TCP
       - "6881:6881/udp" # BitTorrent UDP
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=1026
+      - PGID=100
       - TZ=America/Los_Angeles
       - WEBUI_PORT=8080
     volumes:
