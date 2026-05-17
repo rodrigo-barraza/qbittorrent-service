@@ -28,10 +28,10 @@ PLUGINS=(
   "https://raw.githubusercontent.com/MadeOfMagicAndWires/qBit-plugins/master/engines/nyaasi.py|nyaasi.py"
 
   # EZTV — TV shows
-  "https://raw.githubusercontent.com/DrPurp/eztvx-qbittorrent-plugin/main/engines/eztvx.py|eztvx.py"
+  "https://raw.githubusercontent.com/DrPurp/eztvx-qbittorrent-plugin/main/eztvx.py|eztvx.py"
 
   # YTS — movies (YIFY)
-  "https://raw.githubusercontent.com/lazulyra/qbit-plugins/main/engines/yts.py|yts.py"
+  "https://codeberg.org/lazulyra/qbit-plugins/raw/branch/main/yts/yts.py|yts.py"
 
   # TorrentGalaxy — general purpose
   "https://raw.githubusercontent.com/nindogo/qbtSearchScripts/master/torrentgalaxy.py|torrentgalaxy.py"
@@ -49,7 +49,7 @@ PLUGINS=(
   "https://raw.githubusercontent.com/LightDestory/qBittorrent-Search-Plugins/master/src/engines/academictorrents.py|academictorrents.py"
 
   # SolidTorrents — general purpose
-  "https://raw.githubusercontent.com/BurningMop/qBittorrent-Search-Plugins/main/engines/solidtorrents.py|solidtorrents.py"
+  "https://raw.githubusercontent.com/BurningMop/qBittorrent-Search-Plugins/main/solidtorrents.py|solidtorrents.py"
 
   # TorrentDownload — general purpose
   "https://raw.githubusercontent.com/LightDestory/qBittorrent-Search-Plugins/master/src/engines/torrentdownload.py|torrentdownload.py"
@@ -58,13 +58,13 @@ PLUGINS=(
   "https://raw.githubusercontent.com/LightDestory/qBittorrent-Search-Plugins/master/src/engines/yourbittorrent.py|yourbittorrent.py"
 
   # The RarBg — general purpose
-  "https://raw.githubusercontent.com/BurningMop/qBittorrent-Search-Plugins/main/engines/therarbg.py|therarbg.py"
+  "https://raw.githubusercontent.com/BurningMop/qBittorrent-Search-Plugins/main/therarbg.py|therarbg.py"
 
   # Snowfl — meta-search aggregator
   "https://raw.githubusercontent.com/LightDestory/qBittorrent-Search-Plugins/master/src/engines/snowfl.py|snowfl.py"
 
   # Bit Search — general purpose
-  "https://raw.githubusercontent.com/BurningMop/qBittorrent-Search-Plugins/main/engines/bitsearch.py|bitsearch.py"
+  "https://raw.githubusercontent.com/BurningMop/qBittorrent-Search-Plugins/main/bitsearch.py|bitsearch.py"
 )
 
 # ── Download plugins ─────────────────────────────────────────
