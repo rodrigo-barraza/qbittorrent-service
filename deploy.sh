@@ -115,7 +115,7 @@ echo "$COMPOSE_OUTPUT" | sed 's/^/      /'
 
 # ── Fix ownership (linuxserver s6-overlay requirements) ───────
 echo "   🔒 Fixing container permissions..."
-ssh "$SSH_HOST" "sudo ${DOCKER_BIN} exec -u root qbittorrent sh -c '\
+ssh "$SSH_HOST" "sudo ${DOCKER_BIN} exec -u root qbittorrent-service sh -c '\
   chmod 755 /config && \
   chown -R 1026:100 /config && \
   mkdir -p /config/.cache/qBittorrent && \
@@ -126,7 +126,7 @@ ssh "$SSH_HOST" "sudo ${DOCKER_BIN} exec -u root qbittorrent sh -c '\
 echo "   ⏳ Waiting 10s for startup..."
 sleep 10
 
-CONTAINER_STATUS=$(ssh "$SSH_HOST" "sudo ${DOCKER_BIN} ps --filter 'name=qbittorrent' --format '{{.Status}}'" 2>/dev/null || true)
+CONTAINER_STATUS=$(ssh "$SSH_HOST" "sudo ${DOCKER_BIN} ps --filter 'name=qbittorrent-service' --format '{{.Status}}'" 2>/dev/null || true)
 if echo "$CONTAINER_STATUS" | grep -qi "up"; then
   echo "   ✅ qBittorrent is running: ${CONTAINER_STATUS}"
 else

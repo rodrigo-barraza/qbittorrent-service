@@ -1,7 +1,7 @@
 services:
-  qbittorrent:
+  qbittorrent-service:
     image: lscr.io/linuxserver/qbittorrent:latest
-    container_name: qbittorrent
+    container_name: qbittorrent-service
     restart: unless-stopped
     ports:
       - "8080:8080"    # WebUI
