@@ -116,6 +116,10 @@ echo "   🔄 Restarting container..."
 COMPOSE_OUTPUT=$(ssh "$SSH_HOST" "cd '${COMPOSE_DIR}' && sudo ${DOCKER_BIN} compose down --remove-orphans 2>&1 && sudo ${DOCKER_BIN} compose up -d 2>&1" 2>&1)
 echo "$COMPOSE_OUTPUT" | sed 's/^/      /'
 
+# ── Fix config ownership (linuxserver s6-overlay can leave /config read-only) ──
+echo "   🔒 Fixing /config permissions..."
+ssh "$SSH_HOST" "sudo ${DOCKER_BIN} exec -u root qbittorrent sh -c 'chmod 755 /config && chown -R 1026:100 /config && mkdir -p /config/.cache/qBittorrent && chown -R 1026:100 /config/.cache'" 2>/dev/null || true
+
 # ── Verify ────────────────────────────────────────────────────
 echo "   ⏳ Waiting 10s for startup..."
 sleep 10
