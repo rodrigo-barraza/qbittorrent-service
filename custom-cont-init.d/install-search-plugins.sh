@@ -10,7 +10,9 @@
 # https://github.com/qbittorrent/search-plugins/wiki/Unofficial-search-plugins
 # ============================================================
 
-PLUGIN_DIR="/config/qBittorrent/data/nova3/engines"
+PLUGIN_DIR="/config/qBittorrent/nova3/engines"
+# Legacy path (pre-v5) — kept as symlink for compatibility
+LEGACY_PLUGIN_DIR="/config/qBittorrent/data/nova3/engines"
 
 echo "🧲 [plugin-init] Installing community search plugins..."
 
